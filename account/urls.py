@@ -17,4 +17,12 @@ urlpatterns = [
     path('password_change/done',
          auth_views.PasswordChangeDoneView.as_view(),
          name='password_change_done'),
+    # reset password urls
+    # 填邮箱；发送token及连接给邮箱
+    path('password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
+    path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
+    # 邮箱中拿到凭证跳转回网页
+    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+
 ]
