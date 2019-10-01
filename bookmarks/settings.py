@@ -120,7 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/account/'  # 登录后默认跳转页面
+# LOGIN_REDIRECT_URL = '/account/'  # 登录后默认跳转页面  TODO 没有登录自动调转到next视图
 LOGIN_URL = 'login'  # 如果未登录，强制要求的进入登录的视图
 LOGOUT_URL = 'logout'  #
 
