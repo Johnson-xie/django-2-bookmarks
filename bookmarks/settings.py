@@ -119,6 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'  # server media files, 提供访问url
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # 上传的位置
+
 
 LOGIN_REDIRECT_URL = '/account/'  # 登录后默认跳转页面  TODO 没有登录自动调转到next视图
 LOGIN_URL = 'login'  # 如果未登录，强制要求的进入登录的视图
