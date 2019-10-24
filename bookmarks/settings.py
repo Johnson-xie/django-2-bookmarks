@@ -25,7 +25,7 @@ ALLOWED_HOSTS = ['www.johnson.com', 'www.mysite.com', 'www.localhost.com', '127.
 # Application definition
 
 INSTALLED_APPS = [
-    'account',
+    'account.apps.AccountConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -33,9 +33,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
-    'images',
+    'images.apps.ImagesConfig',
     'sorl.thumbnail',
-    'actions',
+    'actions.apps.ActionsConfig',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +141,9 @@ SOCIAL_AUTH_FACEBOOK_KEY = '471861736738160'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'b8b19c8c8798c6946ef1cb64a9b03ed2'
 # SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 THUMBNAIL_DEBUG = True
+
+
+# integrate redis
+REDIS_HOST = 'localhost'
+REDIS_PORT = '6379'
+REDIS_DB = 0
